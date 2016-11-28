@@ -1,6 +1,7 @@
 #body {
     padding-bottom: 50px;
 }
+
 .navbar-btn {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
@@ -12,16 +13,18 @@
         min-width: 100% !important;
         top: 50px !important;
     }
-    .dropdown .hrzntldrpdwn > li > a {
+    .dropdown .hrzntldrpdwn>li>a {
         color: #EEEEEE !important;
         font-weight: 500 !important;
     }
 }
+
 @media all and (min-width: 768px) {
     #body {
         padding-bottom: 60px;
     }
 }
+
 @media all and (min-width: 1200px) {
     .navbar.navbar-static-top {
         border-bottom: 1px solid #D2D2D2;
@@ -31,16 +34,18 @@
 .material-icons {
     font-size: 24px !important;
 }
+
 .material-icons.rt8 {
     position: relative;
     top: 8px;
 }
+
 .material-icons.rt3 {
     position: relative;
     top: 3px;
 }
 
-#main_container > .panel > .panel-heading {
+#main_container>.panel>.panel-heading {
     border-top: double 4px #EEEEEE;
     border-radius: 0px;
 }
@@ -50,7 +55,9 @@
     margin-top: 10px !important;
 }
 
+
 /* Prevent the text contents of draggable elements from being selectable. */
+
 [draggable] {
     -moz-user-select: none;
     -khtml-user-select: none;
@@ -65,6 +72,7 @@
     cursor: -webkit-grab;
     cursor: url(https://mail.google.com/mail/images/2/openhand.cur) 8 8;
 }
+
 [draggable]:active {
     cursor: grabbing !important;
     cursor: -moz-grabbing !important;
@@ -78,6 +86,7 @@
     background-color: #45adad;
     transform: scale(0.75);
 }
+
 .cardsonfield0,
 .cardsonfield1 {
     border-top: 4px solid #dddddd;
@@ -98,23 +107,28 @@
     -webkit-touch-callout: none !important;
     -webkit-user-select: none !important;
     /*background-color: #0d6787;*/
-    -webkit-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
-    -moz-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
-    box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
-    -webkit-transition: all 0.175s ease-in-out; /* Firefox */
-    -moz-transition: all 0.175s ease-in-out; /* WebKit */
-    -o-transition: all 0.175s ease-in-out; /* Opera */
-    transition: all 0.175s ease-in-out; /* Standard */
+    -webkit-box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.0);
+    -moz-box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.0);
+    box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.0);
+    -webkit-transition: all 0.175s ease-in-out;
+    /* Firefox */
+    -moz-transition: all 0.175s ease-in-out;
+    /* WebKit */
+    -o-transition: all 0.175s ease-in-out;
+    /* Opera */
+    transition: all 0.175s ease-in-out;
+    /* Standard */
     transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
     -webkit-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
     -moz-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
     -o-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
     -ms-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
 }
+
 .cardcB {
-    -webkit-box-shadow: inset 0px 0px 22px 2px rgba(0,0,0,0.5), 0px 10px 22px 0px rgba(0,0,0,0.0);
-    -moz-box-shadow: inset 0px 0px 22px 2px rgba(0,0,0,0.5), 0px 10px 22px 0px rgba(0,0,0,0.0);
-    box-shadow: inset 0px 0px 22px 2px rgba(0,0,0,0.5), 0px 10px 22px 0px rgba(0,0,0,0.0);
+    -webkit-box-shadow: inset 0px 0px 22px 2px rgba(0, 0, 0, 0.5), 0px 10px 22px 0px rgba(0, 0, 0, 0.0);
+    -moz-box-shadow: inset 0px 0px 22px 2px rgba(0, 0, 0, 0.5), 0px 10px 22px 0px rgba(0, 0, 0, 0.0);
+    box-shadow: inset 0px 0px 22px 2px rgba(0, 0, 0, 0.5), 0px 10px 22px 0px rgba(0, 0, 0, 0.0);
 }
 
 .cardc .sfmd1 {
@@ -127,53 +141,21 @@
     background-color: rgba(236, 153, 0, 0.8);
     transform: rotate(35deg);
 }
+
 .cardcB.mdrs {
     // Madras
     background-color: hsl(34, 53%, 82%);
-    background-image: repeating-linear-gradient(45deg, transparent 5px, hsla(197, 62%, 11%, 0.5) 5px, hsla(197, 62%, 11%, 0.5) 10px,
-      hsla(5, 53%, 63%, 0) 10px, hsla(5, 53%, 63%, 0) 35px, hsla(5, 53%, 63%, 0.5) 35px, hsla(5, 53%, 63%, 0.5) 40px,
-      hsla(197, 62%, 11%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 50px, hsla(197, 62%, 11%, 0) 50px, hsla(197, 62%, 11%, 0) 60px,
-      hsla(5, 53%, 63%, 0.5) 60px, hsla(5, 53%, 63%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 80px,
-      hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(5, 53%, 63%, 0.5) 90px, hsla(5, 53%, 63%, 0.5) 110px,
-      hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 120px, hsla(197, 62%, 11%, 0.5) 120px, hsla(197, 62%, 11%, 0.5) 140px
-      ),
-    repeating-linear-gradient(135deg, transparent 5px, hsla(197, 62%, 11%, 0.5) 5px, hsla(197, 62%, 11%, 0.5) 10px,
-      hsla(5, 53%, 63%, 0) 10px, hsla(5, 53%, 63%, 0) 35px, hsla(5, 53%, 63%, 0.5) 35px, hsla(5, 53%, 63%, 0.5) 40px,
-      hsla(197, 62%, 11%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 50px, hsla(197, 62%, 11%, 0) 50px, hsla(197, 62%, 11%, 0) 60px,
-      hsla(5, 53%, 63%, 0.5) 60px, hsla(5, 53%, 63%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 80px,
-      hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(5, 53%, 63%, 0.5) 90px, hsla(5, 53%, 63%, 0.5) 110px,
-      hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 140px, hsla(197, 62%, 11%, 0.5) 140px, hsla(197, 62%, 11%, 0.5) 160px
-    );
+    background-image: repeating-linear-gradient(45deg, transparent 5px, hsla(197, 62%, 11%, 0.5) 5px, hsla(197, 62%, 11%, 0.5) 10px, hsla(5, 53%, 63%, 0) 10px, hsla(5, 53%, 63%, 0) 35px, hsla(5, 53%, 63%, 0.5) 35px, hsla(5, 53%, 63%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 50px, hsla(197, 62%, 11%, 0) 50px, hsla(197, 62%, 11%, 0) 60px, hsla(5, 53%, 63%, 0.5) 60px, hsla(5, 53%, 63%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 80px, hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(5, 53%, 63%, 0.5) 90px, hsla(5, 53%, 63%, 0.5) 110px, hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 120px, hsla(197, 62%, 11%, 0.5) 120px, hsla(197, 62%, 11%, 0.5) 140px), repeating-linear-gradient(135deg, transparent 5px, hsla(197, 62%, 11%, 0.5) 5px, hsla(197, 62%, 11%, 0.5) 10px, hsla(5, 53%, 63%, 0) 10px, hsla(5, 53%, 63%, 0) 35px, hsla(5, 53%, 63%, 0.5) 35px, hsla(5, 53%, 63%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 50px, hsla(197, 62%, 11%, 0) 50px, hsla(197, 62%, 11%, 0) 60px, hsla(5, 53%, 63%, 0.5) 60px, hsla(5, 53%, 63%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 80px, hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(5, 53%, 63%, 0.5) 90px, hsla(5, 53%, 63%, 0.5) 110px, hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 140px, hsla(197, 62%, 11%, 0.5) 140px, hsla(197, 62%, 11%, 0.5) 160px);
 }
+
 .cardcB.crb {
     // Carbon
-    background: -webkit-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
-        -webkit-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
-        -webkit-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
-        -webkit-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
-        -webkit-linear-gradient(0deg, #1b1b1b 10px, transparent 10px),
-        -webkit-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background: -moz-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
-            -moz-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
-            -moz-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
-            -moz-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
-            -moz-linear-gradient(0deg, #1b1b1b 10px, transparent 10px),
-            -moz-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-            linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-            linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-            linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-            linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-            linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background: -webkit-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px, -webkit-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px, -webkit-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px, -webkit-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px, -webkit-linear-gradient(0deg, #1b1b1b 10px, transparent 10px), -webkit-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background: -moz-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px, -moz-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px, -moz-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px, -moz-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px, -moz-linear-gradient(0deg, #1b1b1b 10px, transparent 10px), -moz-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
     background-size: 20px 20px;
     background-color: #131313;
-    -pie-background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px / 20px,
-        linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px / 20px,
-        linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px / 20px,
-        linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px / 20px,
-        linear-gradient(90deg, #1b1b1b 10px, transparent 10px) 0 0 / 20px,
-        linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424)
-        0 0 / 20px #131313;
+    -pie-background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px / 20px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px / 20px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px / 20px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px / 20px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px) 0 0 / 20px, linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424) 0 0 / 20px #131313;
     behavior: url(/pie/PIE.htc);
 }
 
@@ -181,50 +163,63 @@
 .cardc.isActive,
 .cardcB:active,
 .cardcB.isActive {
-    -webkit-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.5);
-    box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.5);
     transform: rotate(0deg) scale(0.95) skew(0deg) translate(0px);
     -webkit-transform: rotate(0deg) scale(0.95) skew(0deg) translate(0px);
     -moz-transform: rotate(0deg) scale(0.95) skew(0deg) translate(0px);
     -o-transform: rotate(0deg) scale(0.95) skew(0deg) translate(0px);
     -ms-transform: rotate(0deg) scale(0.95) skew(0deg) translate(0px);
 }
+
 .cardc:active .cardlabel p,
 .cardc.isActive .cardlabel p {
-    -webkit-box-shadow: 0px 5px 22px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 5px 22px 0px rgba(0,0,0,0.5);
-    box-shadow: 0px 5px 22px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 5px 22px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 5px 22px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 22px 0px rgba(0, 0, 0, 0.5);
 }
+
 .cardc:active .cardlabel,
 .cardc.isActive .cardlabel {
-    -webkit-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.5);
-    box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.5);
 }
+
 .cardc:active .cardicon,
 .cardc.isActive .cardicon {
-    -webkit-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
-    -moz-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
-    box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
+    -webkit-box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.0);
+    -moz-box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.0);
+    box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.0);
 }
+
 .cardc .cardicon {
     width: 100%;
     height: 14rem;
-    -webkit-transition: all 0.275s ease-in-out; /* Firefox */
-    -moz-transition: all 0.275s ease-in-out; /* WebKit */
-    -o-transition: all 0.275s ease-in-out; /* Opera */
-    transition: all 0.275s ease-in-out; /* Standard */
+    -webkit-transition: all 0.275s ease-in-out;
+    /* Firefox */
+    -moz-transition: all 0.275s ease-in-out;
+    /* WebKit */
+    -o-transition: all 0.275s ease-in-out;
+    /* Opera */
+    transition: all 0.275s ease-in-out;
+    /* Standard */
     background-color: #ddeeff;
-    -webkit-box-shadow: inset 0px 0px 22px 2px rgba(0,0,0,0.5);
-    -moz-box-shadow: inset 0px 0px 22px 2px rgba(0,0,0,0.5);
-    box-shadow: inset 0px 0px 22px 2px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0px 0px 22px 2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0px 0px 22px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 0px 22px 2px rgba(0, 0, 0, 0.5);
 }
+
 .cardc .cardlabel {
-    -webkit-transition: all 0.175s ease-in-out; /* Firefox */
-    -moz-transition: all 0.175s ease-in-out; /* WebKit */
-    -o-transition: all 0.175s ease-in-out; /* Opera */
-    transition: all 0.175s ease-in-out; /* Standard */
+    -webkit-transition: all 0.175s ease-in-out;
+    /* Firefox */
+    -moz-transition: all 0.175s ease-in-out;
+    /* WebKit */
+    -o-transition: all 0.175s ease-in-out;
+    /* Opera */
+    transition: all 0.175s ease-in-out;
+    /* Standard */
     position: absolute;
     width: 100%;
     bottom: 5rem;
@@ -232,24 +227,30 @@
     text-align: center;
     background-color: rgba(100, 200, 250, 0.8);
     vertical-align: middle;
-    -webkit-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
-    -moz-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
-    box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
+    -webkit-box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.0);
+    -moz-box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.0);
+    box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.0);
 }
+
 .cardc .cardlabel p {
-    -webkit-transition: all 0.175s ease-in-out; /* Firefox */
-    -moz-transition: all 0.175s ease-in-out; /* WebKit */
-    -o-transition: all 0.175s ease-in-out; /* Opera */
-    transition: all 0.175s ease-in-out; /* Standard */
+    -webkit-transition: all 0.175s ease-in-out;
+    /* Firefox */
+    -moz-transition: all 0.175s ease-in-out;
+    /* WebKit */
+    -o-transition: all 0.175s ease-in-out;
+    /* Opera */
+    transition: all 0.175s ease-in-out;
+    /* Standard */
     text-transform: uppercase;
     text-align: center;
     color: #ffffff;
     /*color: #45adad;*/
     text-shadow: 0px 0px 20px rgba(100, 100, 100, 1);
-    -webkit-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
-    -moz-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
-    box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
+    -webkit-box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.0);
+    -moz-box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.0);
+    box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.0);
 }
+
 .cardc .cardcntnt {
     padding: 0.35rem;
     padding-top: 1rem;
@@ -260,6 +261,22 @@
     color: #ffffff;
     /*background-color: #45adad;*/
     background-color: #0d6787;
+}
+
+.cardc[val_HP]::before {
+    content: "HP:" attr(val_HP);
+}
+
+.cardc[val_HP][val_AlreadyUsed]::before {
+    content: "HP:" attr(val_HP) "/AU:" attr(val_AlreadyUsed);
+}
+
+.cardc[val_HP][val_RoundsLeft]::before {
+    content: "HP:" attr(val_HP) "/RL:" attr(val_RoundsLeft);
+}
+
+.cardc[val_HP][val_AlreadyUsed][val_RoundsLeft]::before {
+    content: "HP:" attr(val_HP) "/AU:" attr(val_AlreadyUsed) "/RL:" attr(val_RoundsLeft);
 }
 
 #elementeditor * {
@@ -350,10 +367,6 @@
     background-color: rgba(106, 73, 11, 0.8);
 }
 
-
-
-
-
 .cardc .cardicon.Bishop2 .ci.head {
     width: 70px;
     height: 70px;
@@ -433,10 +446,6 @@
     right: 40px;
     background-color: rgba(106, 73, 11, 0.8);
 }
-
-
-
-
 
 .cardc .cardicon.Bishop3 .ci.head {
     width: 70px;

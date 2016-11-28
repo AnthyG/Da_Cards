@@ -1,5 +1,4 @@
-[
-    {
+[{
         "Type": "Bishop", // Typ/Name der Karte
         "CardLabel": "Bishop #1", // Label der Karte
         "CardCntnt": "The Bishop;", // Content der Karte (also in der Textbox)
@@ -7,7 +6,7 @@
         "AlreadyUsed": false, // Ob die Karte (in dieser Runde) schon benutzt wurde
         "RoundsLeft": 3, // Wie viele Rotationen die Karte noch lebt
         "MP-S": 2, // Wie viel Mana zum Summonen aufgebraucht wird
-        // "MP-A": SOLL DAT SEIN? KOSTEN FÜR NEN ANGRIFF!?
+        // "MP-A": SOLL DAT SEIN? KOSTEN FÜR NEN ANGRIFF!? (vlt bei ults oda so)
         "AP": 2, // Attack-Points der Karte
         "AT": "Physical", // Attack-Type, also "Magical" oder "Physical"
         "Effects": [
@@ -31,9 +30,9 @@
         "AlreadyUsed": false, // Ob die Karte (in dieser Runde) schon benutzt wurde
         "RoundsLeft": 2, // Wie viele Rotationen die Karte noch lebt
         "MP-S": 3, // Wie viel Mana zum Summonen aufgebraucht wird
-        // "MP-A": SOLL DAT SEIN? KOSTEN FÜR NEN ANGRIFF!?
+        // "MP-A": SOLL DAT SEIN? KOSTEN FÜR NEN ANGRIFF!? (vlt bei ults oda so)
         "AP": 3, // Attack-Points der Karte
-        "AT": "Physical", // Attack-Type, also "Magical" oder "Physical"
+        "AT": "Magical", // Attack-Type, also "Magical" oder "Physical"
         "Effects": [
             // Die Effekte, die auf dieser Karte sind, ihre "RoundsLeft",
             // und was sie halt machn (abhängig vom Type).
@@ -55,7 +54,7 @@
         "AlreadyUsed": false, // Ob die Karte (in dieser Runde) schon benutzt wurde
         "RoundsLeft": 5, // Wie viele Rotationen die Karte noch lebt
         "MP-S": 8, // Wie viel Mana zum Summonen aufgebraucht wird
-        // "MP-A": SOLL DAT SEIN? KOSTEN FÜR NEN ANGRIFF!?
+        // "MP-A": SOLL DAT SEIN? KOSTEN FÜR NEN ANGRIFF!? (vlt bei ults oda so)
         "AP": 4, // Attack-Points der Karte
         "AT": "Physical", // Attack-Type, also "Magical" oder "Physical"
         "Effects": [

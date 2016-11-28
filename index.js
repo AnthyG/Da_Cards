@@ -60,7 +60,7 @@ var userlists = { "eo": {}, "o": [], "g": {}, "gids": [] };
 var roundLengthNormal = (1 * 10) - 1; // 1min (60secs)
 var roundLengthExtended = (60 * 60) - 1; // 60mins (3600secs)
 
-// https://mcsa.sytes.net/da_cards/cardcreator.php
+// https://mcsanthy.de/da_cards/cardcreator.php
 var standardDeckCards = eval(fs.readFileSync('standardDeckCards.js', 'UTF-8'));
 setInterval(function() {
     standardDeckCards = eval(fs.readFileSync('standardDeckCards.js', 'UTF-8'));
@@ -723,23 +723,27 @@ io.on('connection', function(socket) {
             // SCL("Round ("+userlists["g"][roomid]["roundNumber"]+") Time passed: "+userlists["g"][roomid]["timeRunning"], "", "aiI", roomid);
         }
 
-        for (var px = 0; px < 2; px++) {
-            for (var cx = 0; cx < userlists["g"][roomid]["Players"][px]["deck"]["onField"].length; cx++) {
-                // console.log(px+" // "+cx);
-                if (userlists["g"][roomid]["Players"][px]["deck"]["onField"][cx]) {
-                    // console.log("exists");
-                    userlists["g"][roomid]["Players"][px]["deck"]["onField"][cx]["RoundsLeft"]--;
-                    if (userlists["g"][roomid]["Players"][px]["deck"]["onField"][cx]["RoundsLeft"] === 0) {
-                        // userlists["g"][roomid]["Players"][px]["deck"]["onField"].splice(cx, 1);
-                        userlists["g"][roomid]["Players"][px]["deck"]["onField"][cx] = null;
-                    }
-                }
-            }
-        }
-
         if (userlists["g"][roomid]["timeRunning"] < userlists["g"][roomid]["roundLength"] && nextround === false) {
             userlists["g"][roomid]["timeRunning"]++;
         } else if (userlists["g"][roomid]["timeRunning"] >= userlists["g"][roomid]["roundLength"] || nextround === true) {
+            for (var px = 0; px < 2; px++) {
+                // for (var cx = 0; cx < userlists["g"][roomid]["Players"][px]["deck"]["onField"].length; cx++) {
+                for (var cx in userlists["g"][roomid]["Players"][px]["deck"]["onField"]) {
+                    // console.log(px+" // "+cx);
+                    if (userlists["g"][roomid]["Players"][px]["deck"]["onField"][cx] !== null) {
+                        userlists["g"][roomid]["Players"][px]["deck"]["onField"][cx]["AlreadyUsed"] = false;
+
+                        // console.log("exists");
+                        if (userlists["g"][roomid]["Players"][px]["deck"]["onField"][cx]["RoundsLeft"] >= 1) {
+                            // userlists["g"][roomid]["Players"][px]["deck"]["onField"].splice(cx, 1);
+                            userlists["g"][roomid]["Players"][px]["deck"]["onField"][cx]["RoundsLeft"]--;
+                        } else if (userlists["g"][roomid]["Players"][px]["deck"]["onField"][cx]["RoundsLeft"] < 1) {
+                            userlists["g"][roomid]["Players"][px]["deck"]["onField"][cx] = null;
+                        }
+                    }
+                }
+            }
+
             userlists["g"][roomid]["timeRunning"] = 0;
             userlists["g"][roomid]["roundNumber"]++;
             if (nextround === true) {
@@ -877,13 +881,58 @@ io.on('connection', function(socket) {
             } else if (mt === "f0-f1") {
                 // Checken, ob es gewisse typen gibt, die auf dem Gegnerfield ausliegen, die z.B. blockieren
                 // Dann halt den Schaden/Effekte usw. austeilen, AlreadyUsed setzen, MP-Left für den Spieler decreasen und kA wat noch
+                if (userlists["g"][roomid]["Players"][itsme]["deck"]["onField"][c1] && userlists["g"][roomid]["Players"][itshim]["deck"]["onField"][c2]) {
+                    console.log(socket.username + " :: f0-f1 :: " + c1 + " --> " + c2);
+                    SCL(socket.username + " :: f0-f1 :: " + c1 + " --> " + c2);
 
-                console.log(socket.username + " :: f0-f1 :: " + c1 + " --> " + c2);
-                SCL(socket.username + " :: f0-f1 :: " + c1 + " --> " + c2);
-                snddcks();
-                snddcks(true);
+                    // VERY BASIC ATTACK-SYSTEM
+                    if (userlists["g"][roomid]["Players"][itsme]["deck"]["onField"][c1]["AlreadyUsed"] === false) {
+                        userlists["g"][roomid]["Players"][itsme]["deck"]["onField"][c1]["AlreadyUsed"] = true;
 
-                gameloop(roomid, true);
+                        var c1_HP = userlists["g"][roomid]["Players"][itsme]["deck"]["onField"][c1]["HP"];
+                        var c2_HP = userlists["g"][roomid]["Players"][itshim]["deck"]["onField"][c2]["HP"];
+                        var c1_AP = userlists["g"][roomid]["Players"][itsme]["deck"]["onField"][c1]["AP"];
+                        var c2_AP = userlists["g"][roomid]["Players"][itshim]["deck"]["onField"][c2]["AP"];
+
+                        for (var attacks = 0; attacks < c1_AP; attacks++) {
+                            if (c2_HP > 0) {
+                                c2_HP--;
+                            } else {
+                                break;
+                            }
+                        }
+                        if (c2_HP > 0) {
+                            userlists["g"][roomid]["Players"][itshim]["deck"]["onField"][c2]["HP"] = c2_HP;
+                            for (var attacks = 0; attacks < c1_HP; attacks++) {
+                                if (c1_HP > 0) {
+                                    c1_HP--;
+                                } else {
+                                    break;
+                                }
+                            }
+                            if (c1_HP > 0) {
+                                userlists["g"][roomid]["Players"][itsme]["deck"]["onField"][c1]["HP"] = c1_HP;
+                            } else if (c1_HP === 0) {
+                                userlists["g"][roomid]["Players"][itsme]["deck"]["onField"][c1] = null;
+                                SCL(c1 + " of yours has been destroyed by " + itshim + " with " + c2);
+                            }
+                        } else if (c2_HP === 0) {
+                            userlists["g"][roomid]["Players"][itshim]["deck"]["onField"][c2] = null;
+                            SCL(c2 + " of " + itshim + " has been destroyed by you with " + c1);
+                        }
+                    } else {
+                        SCL(c1 + " has already been used in this round!");
+                    }
+
+                    snddcks();
+                    snddcks(true);
+                } else {
+                    SCL("either c1 :: " + c1 + " or c2 :: " + c2 + " doesn't exist.");
+                    snddcks();
+                }
+
+                // Er soll ja nich ne neue runde anfangn, nur weil EINMAL angegriffn wurde..
+                // gameloop(roomid, true);
             }
 
             // userlists["g"][roomid]["timeRunning"] = userlists["g"][roomid]["roundLength"] + 1;
@@ -905,7 +954,9 @@ io.on('connection', function(socket) {
 
         SCL("Your Opponent (" + socket.username + ") gave up. You Win!", function FNCr(CALLBACKf) {
             $('.modal').modal('hide');
-            socket.emit('roundisover');
+            setTimeout(function() {
+                socket.emit('roundisover');
+            }, 300);
         }, "aeI", oldroomid);
 
         SCL("You gave up, you ....", function FNCr(CALLBACKf) {

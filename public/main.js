@@ -17,7 +17,7 @@ $(function() {
     var socket = io();
 
     // Prevents input from having injected markup
-    function cleanInput (input) {
+    function cleanInput(input) {
         return $('<div/>').text(input).text();
     }
 
@@ -94,7 +94,7 @@ $(function() {
         $(".nrops").html(data.nrops);
         var poHTML = '';
         for (var x = 0; x < data.po.length; x++) {
-            poHTML += '<li>'+data.po[x]+'</li>';
+            poHTML += '<li>' + data.po[x] + '</li>';
         }
         $(".po").html($(poHTML));
     });
@@ -105,14 +105,14 @@ $(function() {
     socket.on('playerjoined', function(data) {
         roomid = data['gid'];
         opponent = data['usr'];
-        console.log(opponent+" has joined "+roomid);
+        console.log(opponent + " has joined " + roomid);
         socket.emit('playerhasjoined', {
             "oppo": opponent
         });
     });
     socket.on('otheropponent', function(data) {
         opponent = data['usr'];
-        console.log(opponent+" is your opponent");
+        console.log(opponent + " is your opponent");
     });
 
     function assigncarddragsndrops(off) {
@@ -202,7 +202,7 @@ $(function() {
                 $(".cardsonhand0").html('');
                 $.each(val0, function(key, val) {
                     if (val) {
-                        var cardcode = '<div class="cardc" cardid="'+key+'" draggable="true"> <div class="cardicon '+val["Type"]+'"> <div id="head" class="ci head"> <div id="hat" class="ci hat"> <div id="hat-top" class="ci hat-top"></div><div id="hat-bottom" class="ci hat-bottom"></div></div><div id="hair" class="ci hair"></div><div id="eyes" class="ci eyes"> <div id="eye-left" class="ci eye-left"></div><div id="eye-right" class="ci eye-right"></div></div><div id="mouth" class="ci mouth"> <div id="upper-lip" class="ci upper-lip"></div><div id="lower-lip" class="ci lower-lip"></div></div></div><div id="shoulders" class="ci shoulders"> <div id="shoulder-left" class="ci shoulder-left"></div><div id="shoulder-right" class="ci shoulder-right"></div></div><div id="body" class="ci body"> <div id="zipper" class="ci zipper"></div></div></div><div class="cardcntnt"> '+val["CardCntnt"]+' </div><div class="cardlabel"> <p> '+val["CardLabel"]+' </p></div></div>';
+                        var cardcode = '<div class="cardc" cardid="' + key + '" draggable="true" val_HP="' + val["HP"] + '"> <div class="cardicon ' + val["Type"] + '"> <div id="head" class="ci head"> <div id="hat" class="ci hat"> <div id="hat-top" class="ci hat-top"></div><div id="hat-bottom" class="ci hat-bottom"></div></div><div id="hair" class="ci hair"></div><div id="eyes" class="ci eyes"> <div id="eye-left" class="ci eye-left"></div><div id="eye-right" class="ci eye-right"></div></div><div id="mouth" class="ci mouth"> <div id="upper-lip" class="ci upper-lip"></div><div id="lower-lip" class="ci lower-lip"></div></div></div><div id="shoulders" class="ci shoulders"> <div id="shoulder-left" class="ci shoulder-left"></div><div id="shoulder-right" class="ci shoulder-right"></div></div><div id="body" class="ci body"> <div id="zipper" class="ci zipper"></div></div></div><div class="cardcntnt"> ' + val["CardCntnt"] + ' </div><div class="cardlabel"> <p> ' + val["CardLabel"] + ' </p></div></div>';
                         $(cardcode).appendTo($(".cardsonhand0"));
                     }
                     // console.log("d0_onHand >> VAL for LOLPOS "+lolpos+": ");
@@ -212,10 +212,10 @@ $(function() {
                 $(".cardsonfield0").html('');
                 $.each(val0, function(key, val) {
                     if (val !== null) {
-                        var cardcode = '<div class="cardc" cardid="'+key+'" draggable="true"> <div class="cardicon '+val["Type"]+'"> <div id="head" class="ci head"> <div id="hat" class="ci hat"> <div id="hat-top" class="ci hat-top"></div><div id="hat-bottom" class="ci hat-bottom"></div></div><div id="hair" class="ci hair"></div><div id="eyes" class="ci eyes"> <div id="eye-left" class="ci eye-left"></div><div id="eye-right" class="ci eye-right"></div></div><div id="mouth" class="ci mouth"> <div id="upper-lip" class="ci upper-lip"></div><div id="lower-lip" class="ci lower-lip"></div></div></div><div id="shoulders" class="ci shoulders"> <div id="shoulder-left" class="ci shoulder-left"></div><div id="shoulder-right" class="ci shoulder-right"></div></div><div id="body" class="ci body"> <div id="zipper" class="ci zipper"></div></div></div><div class="cardcntnt"> '+val["CardCntnt"]+' </div><div class="cardlabel"> <p> '+val["CardLabel"]+' </p></div></div>';
+                        var cardcode = '<div class="cardc" cardid="' + key + '" draggable="true" val_HP="' + val["HP"] + '" val_AlreadyUsed="' + val["AlreadyUsed"] + '" val_RoundsLeft="' + val["RoundsLeft"] + '"> <div class="cardicon ' + val["Type"] + '"> <div id="head" class="ci head"> <div id="hat" class="ci hat"> <div id="hat-top" class="ci hat-top"></div><div id="hat-bottom" class="ci hat-bottom"></div></div><div id="hair" class="ci hair"></div><div id="eyes" class="ci eyes"> <div id="eye-left" class="ci eye-left"></div><div id="eye-right" class="ci eye-right"></div></div><div id="mouth" class="ci mouth"> <div id="upper-lip" class="ci upper-lip"></div><div id="lower-lip" class="ci lower-lip"></div></div></div><div id="shoulders" class="ci shoulders"> <div id="shoulder-left" class="ci shoulder-left"></div><div id="shoulder-right" class="ci shoulder-right"></div></div><div id="body" class="ci body"> <div id="zipper" class="ci zipper"></div></div></div><div class="cardcntnt"> ' + val["CardCntnt"] + ' </div><div class="cardlabel"> <p> ' + val["CardLabel"] + ' </p></div></div>';
                         $(cardcode).appendTo($(".cardsonfield0"));
                     } else if (val === null) {
-                        var cardcode = '<div class="cardc" cardid="'+key+'" draggable="true"></div>';
+                        var cardcode = '<div class="cardc" cardid="' + key + '" draggable="true"></div>';
                         $(cardcode).appendTo($(".cardsonfield0"));
                     }
                     // console.log("d0_onField >> VAL for LOLPOS "+lolpos+": ");
@@ -229,17 +229,17 @@ $(function() {
             } else if (key0 === "d1_onHand") {
                 $(".cardsonhand1").html('');
                 for (var c = 0; c < val0; c++) {
-                    var cardcode = '<div class="cardc" cardid="'+c+'"> <div class="cardicon "> <div id="head" class="ci head"> <div id="hat" class="ci hat"> <div id="hat-top" class="ci hat-top"></div><div id="hat-bottom" class="ci hat-bottom"></div></div><div id="hair" class="ci hair"></div><div id="eyes" class="ci eyes"> <div id="eye-left" class="ci eye-left"></div><div id="eye-right" class="ci eye-right"></div></div><div id="mouth" class="ci mouth"> <div id="upper-lip" class="ci upper-lip"></div><div id="lower-lip" class="ci lower-lip"></div></div></div><div id="shoulders" class="ci shoulders"> <div id="shoulder-left" class="ci shoulder-left"></div><div id="shoulder-right" class="ci shoulder-right"></div></div><div id="body" class="ci body"> <div id="zipper" class="ci zipper"></div></div></div><div class="cardcntnt">  </div><div class="cardlabel"> <p>  </p></div></div>';
+                    var cardcode = '<div class="cardc" cardid="' + c + '"> <div class="cardicon "> <div id="head" class="ci head"> <div id="hat" class="ci hat"> <div id="hat-top" class="ci hat-top"></div><div id="hat-bottom" class="ci hat-bottom"></div></div><div id="hair" class="ci hair"></div><div id="eyes" class="ci eyes"> <div id="eye-left" class="ci eye-left"></div><div id="eye-right" class="ci eye-right"></div></div><div id="mouth" class="ci mouth"> <div id="upper-lip" class="ci upper-lip"></div><div id="lower-lip" class="ci lower-lip"></div></div></div><div id="shoulders" class="ci shoulders"> <div id="shoulder-left" class="ci shoulder-left"></div><div id="shoulder-right" class="ci shoulder-right"></div></div><div id="body" class="ci body"> <div id="zipper" class="ci zipper"></div></div></div><div class="cardcntnt">  </div><div class="cardlabel"> <p>  </p></div></div>';
                     $(cardcode).appendTo($(".cardsonhand1"));
                 }
             } else if (key0 === "d1_onField") {
                 $(".cardsonfield1").html('');
                 $.each(val0, function(key, val) {
                     if (val !== null) {
-                        var cardcode = '<div class="cardc" cardid="'+key+'"> <div class="cardicon '+val["Type"]+'"> <div id="head" class="ci head"> <div id="hat" class="ci hat"> <div id="hat-top" class="ci hat-top"></div><div id="hat-bottom" class="ci hat-bottom"></div></div><div id="hair" class="ci hair"></div><div id="eyes" class="ci eyes"> <div id="eye-left" class="ci eye-left"></div><div id="eye-right" class="ci eye-right"></div></div><div id="mouth" class="ci mouth"> <div id="upper-lip" class="ci upper-lip"></div><div id="lower-lip" class="ci lower-lip"></div></div></div><div id="shoulders" class="ci shoulders"> <div id="shoulder-left" class="ci shoulder-left"></div><div id="shoulder-right" class="ci shoulder-right"></div></div><div id="body" class="ci body"> <div id="zipper" class="ci zipper"></div></div></div><div class="cardcntnt"> '+val["CardCntnt"]+' </div><div class="cardlabel"> <p> '+val["CardLabel"]+' </p></div></div>';
+                        var cardcode = '<div class="cardc" cardid="' + key + '" val_HP="' + val["HP"] + '"> <div class="cardicon ' + val["Type"] + '"> <div id="head" class="ci head"> <div id="hat" class="ci hat"> <div id="hat-top" class="ci hat-top"></div><div id="hat-bottom" class="ci hat-bottom"></div></div><div id="hair" class="ci hair"></div><div id="eyes" class="ci eyes"> <div id="eye-left" class="ci eye-left"></div><div id="eye-right" class="ci eye-right"></div></div><div id="mouth" class="ci mouth"> <div id="upper-lip" class="ci upper-lip"></div><div id="lower-lip" class="ci lower-lip"></div></div></div><div id="shoulders" class="ci shoulders"> <div id="shoulder-left" class="ci shoulder-left"></div><div id="shoulder-right" class="ci shoulder-right"></div></div><div id="body" class="ci body"> <div id="zipper" class="ci zipper"></div></div></div><div class="cardcntnt"> ' + val["CardCntnt"] + ' </div><div class="cardlabel"> <p> ' + val["CardLabel"] + ' </p></div></div>';
                         $(cardcode).appendTo($(".cardsonfield1"));
                     } else if (val === null) {
-                        var cardcode = '<div class="cardc" cardid="'+key+'"></div>';
+                        var cardcode = '<div class="cardc" cardid="' + key + '"></div>';
                         $(cardcode).appendTo($(".cardsonfield1"));
                     }
                     // console.log("d1_onField >> VAL for LOLPOS "+lolpos+": ");
@@ -270,12 +270,15 @@ $(function() {
     var touchSrcCc = null;
     var pressSrc = null;
     var clickoff = false;
+
     function CGetsActive(which) {
         $(which).addClass("isActive");
     }
+
     function CGetsUnActive(which) {
         $(which).removeClass("isActive");
     }
+
     function handleDragStart(e) {
         // console.log("dragstart "+e);
         CGetsActive(this);
@@ -285,6 +288,7 @@ $(function() {
         e.dataTransfer.effectAllowed = 'grabbing, -moz-grabbing, -webkit-grabbing';
         e.dataTransfer.setData('text/html', this.innerHTML);
     }
+
     function handleDragOver(e) {
         // console.log("dragover "+e);
         if (e.preventDefault) {
@@ -294,14 +298,17 @@ $(function() {
 
         return false;
     }
+
     function handleDragEnter(e) {
         // console.log("dragenter "+e);
         this.classList.add('over');
     }
+
     function handleDragLeave(e) {
         // console.log("dragleave "+e);
         this.classList.remove('over');
     }
+
     function handleDrop(e) {
         // console.log("drop "+e);
         if (e.stopPropagation) {
@@ -314,6 +321,7 @@ $(function() {
 
         return false;
     }
+
     function handleDragEnd(e) {
         // console.log("dragend "+e);
         CGetsUnActive(this);
@@ -326,12 +334,13 @@ $(function() {
             c.classList.remove('over');
         });
     }
+
     function handleTouchThingy(e) {
         if (clickoff == false) {
             if (touchSrcC != null && touchSrcCc != null) {
                 if (this != touchSrcC) {
                     htdnd(touchSrcC, this, "e", touchSrcCc);
-                //    CGetsActive(this);
+                    //    CGetsActive(this);
                 }
                 setTimeout(function() {
                     CGetsUnActive(touchSrcC);
@@ -399,6 +408,7 @@ $(function() {
         CGetsActive(this);
         pressSrc = this;
     }
+
     function handleLongPress(e) {
         e.preventDefault();
         if (pressSrc) {
