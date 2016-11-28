@@ -780,8 +780,10 @@ io.on('connection', function(socket) {
                 // userlists["eo"][userlists["g"][roomid]["Players"][itstwo]["Player"]]["gid"] = null;
             }
 
-            snddcks();
-            snddcks(true);
+            if (userlists["g"][roomid]["Winner"] === null && userlists["g"][roomid]["WinCause"] === null) {
+                snddcks();
+                snddcks(true);
+            }
         }
 
         if (userlists["g"][roomid]["Winner"] === null && userlists["g"][roomid]["WinCause"] === null && nextround === false) {
