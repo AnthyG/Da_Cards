@@ -1,0 +1,576 @@
+#body {
+    padding-bottom: 50px;
+}
+.navbar-btn {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+@media all and (max-width: 767px) {
+    .dropdown .hrzntldrpdwn {
+        left: 0 !important;
+        min-width: 100% !important;
+        top: 50px !important;
+    }
+    .dropdown .hrzntldrpdwn > li > a {
+        color: #EEEEEE !important;
+        font-weight: 500 !important;
+    }
+}
+@media all and (min-width: 768px) {
+    #body {
+        padding-bottom: 60px;
+    }
+}
+@media all and (min-width: 1200px) {
+    .navbar.navbar-static-top {
+        border-bottom: 1px solid #D2D2D2;
+    }
+}
+
+.material-icons {
+    font-size: 24px !important;
+}
+.material-icons.rt8 {
+    position: relative;
+    top: 8px;
+}
+.material-icons.rt3 {
+    position: relative;
+    top: 3px;
+}
+
+#main_container > .panel > .panel-heading {
+    border-top: double 4px #EEEEEE;
+    border-radius: 0px;
+}
+
+.modal-footer .btn+.btn {
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
+}
+
+/* Prevent the text contents of draggable elements from being selectable. */
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Required to make elements draggable in old WebKit */
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    cursor: url(https://mail.google.com/mail/images/2/openhand.cur) 8 8;
+}
+[draggable]:active {
+    cursor: grabbing !important;
+    cursor: -moz-grabbing !important;
+    cursor: -webkit-grabbing !important;
+    cursor: url(https://mail.google.com/mail/images/2/closedhand.cur) 8 8 !important;
+}
+
+.cardsonhand0,
+.cardsonhand1 {
+    border-top: 4px solid #dddddd;
+    background-color: #45adad;
+    transform: scale(0.75);
+}
+.cardsonfield0,
+.cardsonfield1 {
+    border-top: 4px solid #dddddd;
+    background-color: #adad45;
+    transform: scale(0.75);
+}
+
+.cardc,
+.cardcB {
+    float: left;
+    margin: 1rem;
+    position: relative;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    height: 20rem;
+    width: 14rem;
+    background-color: #ddeeff;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    /*background-color: #0d6787;*/
+    -webkit-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
+    -moz-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
+    box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
+    -webkit-transition: all 0.175s ease-in-out; /* Firefox */
+    -moz-transition: all 0.175s ease-in-out; /* WebKit */
+    -o-transition: all 0.175s ease-in-out; /* Opera */
+    transition: all 0.175s ease-in-out; /* Standard */
+    transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+    -webkit-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+    -moz-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+    -o-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+    -ms-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+}
+.cardcB {
+    -webkit-box-shadow: inset 0px 0px 22px 2px rgba(0,0,0,0.5), 0px 10px 22px 0px rgba(0,0,0,0.0);
+    -moz-box-shadow: inset 0px 0px 22px 2px rgba(0,0,0,0.5), 0px 10px 22px 0px rgba(0,0,0,0.0);
+    box-shadow: inset 0px 0px 22px 2px rgba(0,0,0,0.5), 0px 10px 22px 0px rgba(0,0,0,0.0);
+}
+
+.cardc .sfmd1 {
+    // Selfmade 1
+    border-radius: 0px;
+    height: 200px;
+    top: 0px;
+    width: 30px;
+    left: 55px;
+    background-color: rgba(236, 153, 0, 0.8);
+    transform: rotate(35deg);
+}
+.cardcB.mdrs {
+    // Madras
+    background-color: hsl(34, 53%, 82%);
+    background-image: repeating-linear-gradient(45deg, transparent 5px, hsla(197, 62%, 11%, 0.5) 5px, hsla(197, 62%, 11%, 0.5) 10px,
+      hsla(5, 53%, 63%, 0) 10px, hsla(5, 53%, 63%, 0) 35px, hsla(5, 53%, 63%, 0.5) 35px, hsla(5, 53%, 63%, 0.5) 40px,
+      hsla(197, 62%, 11%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 50px, hsla(197, 62%, 11%, 0) 50px, hsla(197, 62%, 11%, 0) 60px,
+      hsla(5, 53%, 63%, 0.5) 60px, hsla(5, 53%, 63%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 80px,
+      hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(5, 53%, 63%, 0.5) 90px, hsla(5, 53%, 63%, 0.5) 110px,
+      hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 120px, hsla(197, 62%, 11%, 0.5) 120px, hsla(197, 62%, 11%, 0.5) 140px
+      ),
+    repeating-linear-gradient(135deg, transparent 5px, hsla(197, 62%, 11%, 0.5) 5px, hsla(197, 62%, 11%, 0.5) 10px,
+      hsla(5, 53%, 63%, 0) 10px, hsla(5, 53%, 63%, 0) 35px, hsla(5, 53%, 63%, 0.5) 35px, hsla(5, 53%, 63%, 0.5) 40px,
+      hsla(197, 62%, 11%, 0.5) 40px, hsla(197, 62%, 11%, 0.5) 50px, hsla(197, 62%, 11%, 0) 50px, hsla(197, 62%, 11%, 0) 60px,
+      hsla(5, 53%, 63%, 0.5) 60px, hsla(5, 53%, 63%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 70px, hsla(35, 91%, 65%, 0.5) 80px,
+      hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(5, 53%, 63%, 0.5) 90px, hsla(5, 53%, 63%, 0.5) 110px,
+      hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 140px, hsla(197, 62%, 11%, 0.5) 140px, hsla(197, 62%, 11%, 0.5) 160px
+    );
+}
+.cardcB.crb {
+    // Carbon
+    background: -webkit-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
+        -webkit-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
+        -webkit-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
+        -webkit-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
+        -webkit-linear-gradient(0deg, #1b1b1b 10px, transparent 10px),
+        -webkit-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background: -moz-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
+            -moz-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
+            -moz-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
+            -moz-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
+            -moz-linear-gradient(0deg, #1b1b1b 10px, transparent 10px),
+            -moz-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+            linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+            linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+            linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+            linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+            linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-size: 20px 20px;
+    background-color: #131313;
+    -pie-background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px / 20px,
+        linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px / 20px,
+        linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px / 20px,
+        linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px / 20px,
+        linear-gradient(90deg, #1b1b1b 10px, transparent 10px) 0 0 / 20px,
+        linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424)
+        0 0 / 20px #131313;
+    behavior: url(/pie/PIE.htc);
+}
+
+.cardc:active,
+.cardc.isActive,
+.cardcB:active,
+.cardcB.isActive {
+    -webkit-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.5);
+    transform: rotate(0deg) scale(0.95) skew(0deg) translate(0px);
+    -webkit-transform: rotate(0deg) scale(0.95) skew(0deg) translate(0px);
+    -moz-transform: rotate(0deg) scale(0.95) skew(0deg) translate(0px);
+    -o-transform: rotate(0deg) scale(0.95) skew(0deg) translate(0px);
+    -ms-transform: rotate(0deg) scale(0.95) skew(0deg) translate(0px);
+}
+.cardc:active .cardlabel p,
+.cardc.isActive .cardlabel p {
+    -webkit-box-shadow: 0px 5px 22px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 5px 22px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 5px 22px 0px rgba(0,0,0,0.5);
+}
+.cardc:active .cardlabel,
+.cardc.isActive .cardlabel {
+    -webkit-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.5);
+}
+.cardc:active .cardicon,
+.cardc.isActive .cardicon {
+    -webkit-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
+    -moz-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
+    box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
+}
+.cardc .cardicon {
+    width: 100%;
+    height: 14rem;
+    -webkit-transition: all 0.275s ease-in-out; /* Firefox */
+    -moz-transition: all 0.275s ease-in-out; /* WebKit */
+    -o-transition: all 0.275s ease-in-out; /* Opera */
+    transition: all 0.275s ease-in-out; /* Standard */
+    background-color: #ddeeff;
+    -webkit-box-shadow: inset 0px 0px 22px 2px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px 0px 22px 2px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 0px 22px 2px rgba(0,0,0,0.5);
+}
+.cardc .cardlabel {
+    -webkit-transition: all 0.175s ease-in-out; /* Firefox */
+    -moz-transition: all 0.175s ease-in-out; /* WebKit */
+    -o-transition: all 0.175s ease-in-out; /* Opera */
+    transition: all 0.175s ease-in-out; /* Standard */
+    position: absolute;
+    width: 100%;
+    bottom: 5rem;
+    height: 2rem;
+    text-align: center;
+    background-color: rgba(100, 200, 250, 0.8);
+    vertical-align: middle;
+    -webkit-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
+    -moz-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
+    box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
+}
+.cardc .cardlabel p {
+    -webkit-transition: all 0.175s ease-in-out; /* Firefox */
+    -moz-transition: all 0.175s ease-in-out; /* WebKit */
+    -o-transition: all 0.175s ease-in-out; /* Opera */
+    transition: all 0.175s ease-in-out; /* Standard */
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    /*color: #45adad;*/
+    text-shadow: 0px 0px 20px rgba(100, 100, 100, 1);
+    -webkit-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
+    -moz-box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
+    box-shadow: 0px 10px 22px 0px rgba(0,0,0,0.0);
+}
+.cardc .cardcntnt {
+    padding: 0.35rem;
+    padding-top: 1rem;
+    position: absolute;
+    width: 100%;
+    height: 6rem;
+    bottom: 0rem;
+    color: #ffffff;
+    /*background-color: #45adad;*/
+    background-color: #0d6787;
+}
+
+#elementeditor * {
+    margin: 0.4rem;
+}
+
+.cardc .cardicon .ci {
+    position: absolute;
+    background-color: #000000;
+}
+
+.cardc .cardicon.type-unstyled .head {
+    border-radius: 100rem;
+    width: 7rem;
+    height: 7rem;
+    position: absolute;
+    left: 3.5rem;
+    top: 4.0rem;
+}
+
+.cardc .cardicon.Bishop .ci.head {
+    width: 70px;
+    height: 70px;
+    top: 40px;
+    border-radius: 1000px;
+    left: 35px;
+    background-color: rgb(225, 207, 2);
+}
+
+.cardc .cardicon.Bishop .ci.hat {
+    width: 70px;
+    height: 20px;
+    border-radius: 10px;
+    left: 0px;
+    background-color: rgb(26, 66, 151);
+}
+
+.cardc .cardicon.Bishop .ci.hat-top {
+    height: 15px;
+    left: 10px;
+    border-radius: 7px;
+    top: -2px;
+    width: 50px;
+    background-color: rgb(51, 88, 166);
+}
+
+.cardc .cardicon.Bishop .ci.hat-bottom {
+    width: 60px;
+    height: 3px;
+    border-radius: 5px;
+    top: 14px;
+    left: 5px;
+    background-color: rgba(228, 223, 223, 0.85098);
+    border-top: 2px dotted #ddffee;
+    border-bottom: 1px solid #ffffff;
+}
+
+.cardc .cardicon.Bishop .ci.eyes {
+    width: 50px;
+    height: 5px;
+    left: 10px;
+    top: 28px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.cardc .cardicon.Bishop .ci.eye-left {
+    border-radius: 40px;
+    width: 8px;
+    height: 6px;
+    left: 4px;
+    background-color: rgb(7, 44, 35);
+}
+
+.cardc .cardicon.Bishop .ci.eye-right {
+    width: 8px;
+    height: 6px;
+    right: 4px;
+    border-radius: 40px;
+    background-color: rgb(7, 44, 35);
+}
+
+.cardc .cardicon.Bishop .ci.mouth {
+    width: 10px;
+    height: 3px;
+    border-radius: 4px;
+    left: 30px;
+    top: 50px;
+    background-color: rgba(106, 73, 11, 0.8);
+}
+
+
+
+
+
+.cardc .cardicon.Bishop2 .ci.head {
+    width: 70px;
+    height: 70px;
+    top: 40px;
+    border-radius: 1000px;
+    left: 35px;
+    background-color: rgb(225, 171, 2);
+}
+
+.cardc .cardicon.Bishop2 .ci.hat {
+    width: 70px;
+    height: 20px;
+    border-radius: 10px;
+    left: 0px;
+    background-color: rgb(26, 26, 151);
+}
+
+.cardc .cardicon.Bishop2 .ci.hat-top {
+    height: 15px;
+    left: 10px;
+    border-radius: 7px;
+    top: -2px;
+    width: 50px;
+    background-color: rgb(51, 63, 166);
+}
+
+.cardc .cardicon.Bishop2 .ci.hat-bottom {
+    width: 60px;
+    height: 3px;
+    border-radius: 4px;
+    top: 14px;
+    left: 5px;
+    border-top-width: 2px;
+    border-top-style: dotted;
+    border-top-color: rgb(221, 255, 238);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(255, 255, 255);
+    background-color: rgba(197, 96, 96, 0.85098);
+}
+
+.cardc .cardicon.Bishop2 .ci.hair {
+    background-color: rgb(0, 0, 0);
+}
+
+.cardc .cardicon.Bishop2 .ci.eyes {
+    width: 50px;
+    height: 5px;
+    left: 10px;
+    top: 28px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.cardc .cardicon.Bishop2 .ci.eye-left {
+    border-radius: 40px;
+    width: 8px;
+    height: 6px;
+    left: 4px;
+    background-color: rgb(7, 44, 35);
+}
+
+.cardc .cardicon.Bishop2 .ci.eye-right {
+    width: 8px;
+    height: 6px;
+    right: 4px;
+    border-radius: 40px;
+    background-color: rgb(7, 44, 35);
+}
+
+.cardc .cardicon.Bishop2 .ci.mouth {
+    width: 15px;
+    height: 1px;
+    border-radius: 7px;
+    left: 23px;
+    top: 47px;
+    bottom: 40px;
+    right: 40px;
+    background-color: rgba(106, 73, 11, 0.8);
+}
+
+
+
+
+
+.cardc .cardicon.Bishop3 .ci.head {
+    width: 70px;
+    height: 70px;
+    top: 40px;
+    border-radius: 1000px;
+    left: 35px;
+    background-color: rgb(165, 126, 7);
+}
+
+.cardc .cardicon.Bishop3 .ci.hat {
+    width: 70px;
+    height: 20px;
+    border-radius: 10px;
+    left: 0px;
+    top: 0px;
+    background-color: rgb(26, 26, 151);
+}
+
+.cardc .cardicon.Bishop3 .ci.hat-top {
+    height: 15px;
+    left: 10px;
+    border-radius: 7px;
+    top: 4px;
+    width: 50px;
+    background-color: rgb(51, 63, 166);
+}
+
+.cardc .cardicon.Bishop3 .ci.hat-bottom {
+    width: 60px;
+    height: 3px;
+    border-radius: 4px;
+    top: 15px;
+    left: 5px;
+    border-top-width: 2px;
+    border-top-style: dotted;
+    border-top-color: rgb(221, 255, 238);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(255, 255, 255);
+    background-color: rgba(197, 96, 96, 0.85098);
+}
+
+.cardc .cardicon.Bishop3 .ci.hair {
+    background-color: rgb(0, 0, 0);
+}
+
+.cardc .cardicon.Bishop3 .ci.eyes {
+    width: 50px;
+    height: 5px;
+    left: 10px;
+    top: 28px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.cardc .cardicon.Bishop3 .ci.eye-left {
+    border-radius: 40px;
+    width: 8px;
+    height: 6px;
+    left: 4px;
+    background-color: rgb(7, 44, 35);
+}
+
+.cardc .cardicon.Bishop3 .ci.eye-right {
+    width: 8px;
+    height: 6px;
+    right: 4px;
+    border-radius: 40px;
+    background-color: rgb(7, 44, 35);
+}
+
+.cardc .cardicon.Bishop3 .ci.mouth {
+    width: 31px;
+    height: 2px;
+    border-radius: 7px;
+    left: 20px;
+    top: 37px;
+    bottom: 40px;
+    right: 40px;
+    background-color: rgba(90, 65, 4, 0.8);
+}
+
+.cardc .cardicon.Bishop3 .ci.lower-lip {
+    width: 12px;
+    height: 2px;
+    top: 0px;
+    bottom: 4px;
+    left: 12px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.85098);
+}
+
+.cardc .cardicon.Bishop3 .ci.shoulders {
+    width: 66px;
+    height: 10px;
+    top: 95px;
+    left: 36px;
+    border-radius: 4px;
+    background-color: rgb(5, 19, 87);
+}
+
+.cardc .cardicon.Bishop3 .ci.shoulder-left {
+    width: 30px;
+    height: 16px;
+    top: 6px;
+    left: -20px;
+    border-radius: 10px;
+    background-color: rgb(225, 127, 34);
+}
+
+.cardc .cardicon.Bishop3 .ci.shoulder-right {
+    width: 30px;
+    height: 16px;
+    top: 6px;
+    bottom: 12px;
+    left: 54px;
+    right: 56px;
+    border-radius: 10px;
+    background-color: rgb(225, 127, 34);
+}
+
+.cardc .cardicon.Bishop3 .ci.body {
+    width: 80px;
+    height: 50px;
+    top: 98px;
+    bottom: 200px;
+    left: 28px;
+    border-radius: 5px;
+    background-color: rgb(0, 20, 122);
+}
+
+.cardc .cardicon.Bishop3 .ci.zipper {
+    width: 8px;
+    height: 60px;
+    left: 34px;
+    background-color: rgb(11, 198, 227);
+}
