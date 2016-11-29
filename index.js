@@ -13,14 +13,16 @@ var fs = require('fs');
 var loginlist = [];
 
 function getloginlist(callback) {
-    loginlist = [];
+    loginlist = eval(fs.readFileSync('PRIVATE/loginlist.js', 'UTF-8'));
 
-    var rows;
-    rows = eval(fs.readFileSync('PRIVATE/loginlist.js', 'UTF-8'));
-    rows.forEach(function(row) {
-        //  console.log("\n"+Date().toString()+":\n"+row);
-        loginlist.push({ "user_name": row['user_name'], "user_email": row['user_email'], "user_password_hash": row['user_password_hash'] });
-    });
+    // loginlist = [];
+
+    // var rows;
+    // rows = eval(fs.readFileSync('PRIVATE/loginlist.js', 'UTF-8'));
+    // rows.forEach(function(row) {
+    // console.log("\n"+Date().toString()+":\n"+row);
+    // loginlist.push({ "user_name": row['user_name'], "user_email": row['user_email'], "user_password_hash": row['user_password_hash'] });
+    // });
 
     setTimeout(function() {
         typeof callback === 'function' && callback();

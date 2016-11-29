@@ -4,7 +4,7 @@
         "CardCntnt": "The Bishop;", // Content der Karte (also in der Textbox)
         "HP": 2, // Health-Points der Karte
         "AlreadyUsed": false, // Ob die Karte (in dieser Runde) schon benutzt wurde
-        "RoundsLeft": 3, // Wie viele Rotationen die Karte noch lebt
+        "RoundsLeft": 6, // Wie viele Rotationen die Karte noch lebt
         "MP-S": 2, // Wie viel Mana zum Summonen aufgebraucht wird
         // "MP-A": SOLL DAT SEIN? KOSTEN FÜR NEN ANGRIFF!? (vlt bei ults oda so)
         "AP": 2, // Attack-Points der Karte
@@ -20,7 +20,7 @@
             }
         ],
         // "position": null, // The Position of the Card on Hand or on Field
-        "CID": null
+        "CID": null // A randomized ID for the Card (gets applied after push to a deck)
     },
     {
         "Type": "Bishop2", // Typ/Name der Karte
@@ -28,7 +28,7 @@
         "CardCntnt": "A better Bishop", // Content der Karte (also in der Textbox)
         "HP": 4, // Health-Points der Karte
         "AlreadyUsed": false, // Ob die Karte (in dieser Runde) schon benutzt wurde
-        "RoundsLeft": 2, // Wie viele Rotationen die Karte noch lebt
+        "RoundsLeft": 5, // Wie viele Rotationen die Karte noch lebt
         "MP-S": 3, // Wie viel Mana zum Summonen aufgebraucht wird
         // "MP-A": SOLL DAT SEIN? KOSTEN FÜR NEN ANGRIFF!? (vlt bei ults oda so)
         "AP": 3, // Attack-Points der Karte
@@ -44,7 +44,7 @@
             }
         ],
         // "position": null, // The Position of the Card on Hand or on Field
-        "CID": null
+        "CID": null // A randomized ID for the Card (gets applied after push to a deck)
     },
     {
         "Type": "Bishop3", // Typ/Name der Karte
@@ -68,6 +68,6 @@
             }
         ],
         // "position": null, // The Position of the Card on Hand or on Field
-        "CID": null
+        "CID": null // A randomized ID for the Card (gets applied after push to a deck)
     }
 ];
