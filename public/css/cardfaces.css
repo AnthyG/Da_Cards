@@ -1,0 +1,286 @@
+.cardc .cardicon.Bishop .ci.head {
+    width: 70px;
+    height: 70px;
+    top: 40px;
+    border-radius: 1000px;
+    left: 35px;
+    background-color: rgb(225, 207, 2);
+}
+
+.cardc .cardicon.Bishop .ci.hat {
+    width: 70px;
+    height: 20px;
+    border-radius: 10px;
+    left: 0px;
+    background-color: rgb(26, 66, 151);
+}
+
+.cardc .cardicon.Bishop .ci.hat-top {
+    height: 15px;
+    left: 10px;
+    border-radius: 7px;
+    top: -2px;
+    width: 50px;
+    background-color: rgb(51, 88, 166);
+}
+
+.cardc .cardicon.Bishop .ci.hat-bottom {
+    width: 60px;
+    height: 3px;
+    border-radius: 5px;
+    top: 14px;
+    left: 5px;
+    background-color: rgba(228, 223, 223, 0.85098);
+    border-top: 2px dotted #ddffee;
+    border-bottom: 1px solid #ffffff;
+}
+
+.cardc .cardicon.Bishop .ci.eyes {
+    width: 50px;
+    height: 5px;
+    left: 10px;
+    top: 28px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.cardc .cardicon.Bishop .ci.eye-left {
+    border-radius: 40px;
+    width: 8px;
+    height: 6px;
+    left: 4px;
+    background-color: rgb(7, 44, 35);
+}
+
+.cardc .cardicon.Bishop .ci.eye-right {
+    width: 8px;
+    height: 6px;
+    right: 4px;
+    border-radius: 40px;
+    background-color: rgb(7, 44, 35);
+}
+
+.cardc .cardicon.Bishop .ci.mouth {
+    width: 10px;
+    height: 3px;
+    border-radius: 4px;
+    left: 30px;
+    top: 50px;
+    background-color: rgba(106, 73, 11, 0.8);
+}
+
+.cardc .cardicon.Bishop2 .ci.head {
+    width: 70px;
+    height: 70px;
+    top: 40px;
+    border-radius: 1000px;
+    left: 35px;
+    background-color: rgb(225, 171, 2);
+}
+
+.cardc .cardicon.Bishop2 .ci.hat {
+    width: 70px;
+    height: 20px;
+    border-radius: 10px;
+    left: 0px;
+    background-color: rgb(26, 26, 151);
+}
+
+.cardc .cardicon.Bishop2 .ci.hat-top {
+    height: 15px;
+    left: 10px;
+    border-radius: 7px;
+    top: -2px;
+    width: 50px;
+    background-color: rgb(51, 63, 166);
+}
+
+.cardc .cardicon.Bishop2 .ci.hat-bottom {
+    width: 60px;
+    height: 3px;
+    border-radius: 4px;
+    top: 14px;
+    left: 5px;
+    border-top-width: 2px;
+    border-top-style: dotted;
+    border-top-color: rgb(221, 255, 238);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(255, 255, 255);
+    background-color: rgba(197, 96, 96, 0.85098);
+}
+
+.cardc .cardicon.Bishop2 .ci.hair {
+    background-color: rgb(0, 0, 0);
+}
+
+.cardc .cardicon.Bishop2 .ci.eyes {
+    width: 50px;
+    height: 5px;
+    left: 10px;
+    top: 28px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.cardc .cardicon.Bishop2 .ci.eye-left {
+    border-radius: 40px;
+    width: 8px;
+    height: 6px;
+    left: 4px;
+    background-color: rgb(7, 44, 35);
+}
+
+.cardc .cardicon.Bishop2 .ci.eye-right {
+    width: 8px;
+    height: 6px;
+    right: 4px;
+    border-radius: 40px;
+    background-color: rgb(7, 44, 35);
+}
+
+.cardc .cardicon.Bishop2 .ci.mouth {
+    width: 15px;
+    height: 1px;
+    border-radius: 7px;
+    left: 23px;
+    top: 47px;
+    bottom: 40px;
+    right: 40px;
+    background-color: rgba(106, 73, 11, 0.8);
+}
+
+.cardc .cardicon.Bishop3 .ci.head {
+    width: 70px;
+    height: 70px;
+    top: 40px;
+    border-radius: 1000px;
+    left: 35px;
+    background-color: rgb(165, 126, 7);
+}
+
+.cardc .cardicon.Bishop3 .ci.hat {
+    width: 70px;
+    height: 20px;
+    border-radius: 10px;
+    left: 0px;
+    top: 0px;
+    background-color: rgb(26, 26, 151);
+}
+
+.cardc .cardicon.Bishop3 .ci.hat-top {
+    height: 15px;
+    left: 10px;
+    border-radius: 7px;
+    top: 4px;
+    width: 50px;
+    background-color: rgb(51, 63, 166);
+}
+
+.cardc .cardicon.Bishop3 .ci.hat-bottom {
+    width: 60px;
+    height: 3px;
+    border-radius: 4px;
+    top: 15px;
+    left: 5px;
+    border-top-width: 2px;
+    border-top-style: dotted;
+    border-top-color: rgb(221, 255, 238);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(255, 255, 255);
+    background-color: rgba(197, 96, 96, 0.85098);
+}
+
+.cardc .cardicon.Bishop3 .ci.hair {
+    background-color: rgb(0, 0, 0);
+}
+
+.cardc .cardicon.Bishop3 .ci.eyes {
+    width: 50px;
+    height: 5px;
+    left: 10px;
+    top: 28px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.cardc .cardicon.Bishop3 .ci.eye-left {
+    border-radius: 40px;
+    width: 8px;
+    height: 6px;
+    left: 4px;
+    background-color: rgb(7, 44, 35);
+}
+
+.cardc .cardicon.Bishop3 .ci.eye-right {
+    width: 8px;
+    height: 6px;
+    right: 4px;
+    border-radius: 40px;
+    background-color: rgb(7, 44, 35);
+}
+
+.cardc .cardicon.Bishop3 .ci.mouth {
+    width: 31px;
+    height: 2px;
+    border-radius: 7px;
+    left: 20px;
+    top: 37px;
+    bottom: 40px;
+    right: 40px;
+    background-color: rgba(90, 65, 4, 0.8);
+}
+
+.cardc .cardicon.Bishop3 .ci.lower-lip {
+    width: 12px;
+    height: 2px;
+    top: 0px;
+    bottom: 4px;
+    left: 12px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.85098);
+}
+
+.cardc .cardicon.Bishop3 .ci.shoulders {
+    width: 66px;
+    height: 10px;
+    top: 95px;
+    left: 36px;
+    border-radius: 4px;
+    background-color: rgb(5, 19, 87);
+}
+
+.cardc .cardicon.Bishop3 .ci.shoulder-left {
+    width: 30px;
+    height: 16px;
+    top: 6px;
+    left: -20px;
+    border-radius: 10px;
+    background-color: rgb(225, 127, 34);
+}
+
+.cardc .cardicon.Bishop3 .ci.shoulder-right {
+    width: 30px;
+    height: 16px;
+    top: 6px;
+    bottom: 12px;
+    left: 54px;
+    right: 56px;
+    border-radius: 10px;
+    background-color: rgb(225, 127, 34);
+}
+
+.cardc .cardicon.Bishop3 .ci.body {
+    width: 80px;
+    height: 50px;
+    top: 98px;
+    bottom: 200px;
+    left: 28px;
+    border-radius: 5px;
+    background-color: rgb(0, 20, 122);
+}
+
+.cardc .cardicon.Bishop3 .ci.zipper {
+    width: 8px;
+    height: 60px;
+    left: 34px;
+    background-color: rgb(11, 198, 227);
+}

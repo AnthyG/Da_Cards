@@ -314,7 +314,8 @@ io.on('connection', function(socket) {
                     itshimN = userlists["g"][roomid]["Players"][0]["Player"];
                 }
                 socket.emit("otheropponent", {
-                    "usr": itshimN
+                    "usr": itshimN,
+                    "gid": roomid
                 });
 
                 SP("gamepage.html", function FNCr(CALLBACKf) {
@@ -326,7 +327,7 @@ io.on('connection', function(socket) {
                         });
                         $(".get_g_button").on('click', function() {
                             socket.emit('get_g', {
-                                gid: roomid
+                                "gid": roomid
                             });
                         });
 
@@ -411,7 +412,8 @@ io.on('connection', function(socket) {
                     itshimN = userlists["g"][roomid]["Players"][0]["Player"];
                 }
                 socket.emit("otheropponent", {
-                    "usr": itshimN
+                    "usr": itshimN,
+                    "gid": roomid
                 });
 
                 SP("gamepage.html", function FNCr(CALLBACKf) {
@@ -423,7 +425,7 @@ io.on('connection', function(socket) {
                         });
                         $(".get_g_button").on('click', function() {
                             socket.emit('get_g', {
-                                gid: roomid
+                                "gid": roomid
                             });
                         });
 
@@ -550,11 +552,11 @@ io.on('connection', function(socket) {
         socket.leave("searching");
 
         socket.emit("playerfound", {
-            gid: roomid
+            "gid": roomid
         });
         socket.broadcast.to(roomid).emit('playerjoined', {
-            usr: socket.username,
-            gid: roomid
+            "usr": socket.username,
+            "gid": roomid
         });
     }
     socket.on('playerhasjoined', function(data) {
@@ -564,7 +566,8 @@ io.on('connection', function(socket) {
         var roomid = userlists["eo"][socket.username]["gid"];
 
         socket.broadcast.to(roomid).emit('otheropponent', {
-            usr: socket.username
+            "usr": socket.username,
+            "gid": roomid
         });
 
         setTimeout(function() {
@@ -769,14 +772,14 @@ io.on('connection', function(socket) {
             if (userlists["o"].indexOf(userlists["g"][roomid]["currentPlayer"]) === -1 && userlists["g"][roomid]["Players"][itsone]["roundsOFF"] < 3) {
                 userlists["g"][roomid]["Players"][itsone]["roundsOFF"]++;
             } else if (userlists["o"].indexOf(userlists["g"][roomid]["currentPlayer"]) === -1 && userlists["g"][roomid]["Players"][itsone]["roundsOFF"] === 3) {
-                // userlists["g"][roomid]["Winner"] = userlists["g"][roomid]["Players"][itstwo]["Player"];
-                // userlists["g"][roomid]["WinCause"] = "RO";
-                addnewwin(roomid, userlists["g"][roomid]["Players"][itstwo]["Player"], "RO");
-
                 SCL("Your Opponent (" + userlists["g"][roomid]["Players"][itsone]["Player"] + ") was AFK for too long (" + userlists["g"][roomid]["Players"][itsone]["roundsOFF"] + "). You win!", function FNCr(CALLBACKf) {
                     $('.modal').modal('hide');
                     socket.emit('roundisover');
-                }, "aeI", roomid);
+                }, "", roomid);
+
+                // userlists["g"][roomid]["Winner"] = userlists["g"][roomid]["Players"][itstwo]["Player"];
+                // userlists["g"][roomid]["WinCause"] = "RO";
+                addnewwin(roomid, userlists["g"][roomid]["Players"][itstwo]["Player"], "RO");
 
                 userlists["eo"][userlists["g"][roomid]["Players"][itsone]["Player"]]["gid"] = null;
                 // userlists["eo"][userlists["g"][roomid]["Players"][itstwo]["Player"]]["gid"] = null;

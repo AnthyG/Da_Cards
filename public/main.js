@@ -112,6 +112,7 @@ $(function() {
     });
     socket.on('otheropponent', function(data) {
         opponent = data['usr'];
+        roomid = data['gid'];
         console.log(opponent + " is your opponent");
     });
 
