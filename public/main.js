@@ -70,6 +70,7 @@ $(function() {
     socket.on('loginvalid', function(data) {
         if (data['isvalid'] === true) {
             connected = true;
+            username = data['username'];
             console.log(data['wlcm']);
         } else if (data['isvalid'] === false) {
             alert('Already logged in or other things went wrong!!');

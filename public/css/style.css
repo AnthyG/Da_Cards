@@ -17,6 +17,10 @@
     margin-bottom: 10px !important;
 }
 
+#maincontainer {
+    padding-bottom: 80px;
+}
+
 #bottompartingame {
     left: 0px;
     bottom: 0;
@@ -28,6 +32,9 @@
     position: fixed;
     border-top: 2px solid;
     background-color: #eeeeee;
+    -webkit-box-shadow: 0px 5px 10px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 5px 10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 #bottompartingame>.texts {
@@ -72,14 +79,14 @@
 
 .cardsonhand0,
 .cardsonhand1 {
-    transform: scale(0.75);
+    transform: scale(0.65);
     background-color: #45adad;
     border-top: 4px solid #dddddd;
 }
 
 .cardsonfield0,
 .cardsonfield1 {
-    transform: scale(0.75);
+    transform: scale(0.65);
     background-color: #adad45;
     border-top: 4px solid #dddddd;
 }
@@ -96,6 +103,7 @@
     background-color: #ddeeff;
     -webkit-touch-callout: none !important;
     -webkit-user-select: none !important;
+    user-select: none !important;
     /*background-color: #0d6787;*/
     -webkit-box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.0);
     -moz-box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.0);
@@ -106,13 +114,13 @@
     /* WebKit */
     -o-transition: all 0.175s ease-in-out;
     /* Opera */
-    transition: all 0.175s ease-in-out;
+    transition: all 0.175s ease-in-ou;
     /* Standard */
-    transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
     -webkit-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
     -moz-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
     -o-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
     -ms-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+    transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
 }
 
 .cardcB {
@@ -129,6 +137,10 @@
     height: 200px;
     border-radius: 0px;
     background-color: rgba(236, 153, 0, 0.8);
+    -webkit-transform: rotate(35deg);
+    -moz-transform: rotate(35deg);
+    -o-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
     transform: rotate(35deg);
 }
 
@@ -149,6 +161,20 @@
     behavior: url(/pie/PIE.htc);
 }
 
+.cardc:hover,
+.cardcB:hover {
+    z-index: 1;
+    /*border: 1px solid #000000;*/
+    -webkit-box-shadow: 0px 15px 22px 5px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 15px 22px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 15px 22px 5px rgba(0, 0, 0, 0.5);
+    -webkit-transform: rotate(0deg) scale(1.5) skew(0deg) translate(0px);
+    -moz-transform: rotate(0deg) scale(1.5) skew(0deg) translate(0px);
+    -o-transform: rotate(0deg) scale(1.5) skew(0deg) translate(0px);
+    -ms-transform: rotate(0deg) scale(1.5) skew(0deg) translate(0px);
+    transform: rotate(0deg) scale(1.5) skew(0deg) translate(0px);
+}
+
 .cardc:active,
 .cardc.isActive,
 .cardcB:active,
@@ -156,11 +182,11 @@
     -webkit-box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 10px 22px 0px rgba(0, 0, 0, 0.5);
-    transform: rotate(0deg) scale(0.95) skew(0deg) translate(0px);
     -webkit-transform: rotate(0deg) scale(0.95) skew(0deg) translate(0px);
     -moz-transform: rotate(0deg) scale(0.95) skew(0deg) translate(0px);
     -o-transform: rotate(0deg) scale(0.95) skew(0deg) translate(0px);
     -ms-transform: rotate(0deg) scale(0.95) skew(0deg) translate(0px);
+    transform: rotate(0deg) scale(0.95) skew(0deg) translate(0px);
 }
 
 .cardc:active .cardlabel p,
@@ -285,4 +311,29 @@
     height: 7rem;
     position: absolute;
     border-radius: 100rem;
+}
+
+
+/* 2 2 5 2 2*/
+
+.cardsonfield0 .cardc[cardid='0'],
+.cardsonfield0 .cardc[cardid='1'],
+.cardsonfield0 .cardc[cardid='11'],
+.cardsonfield0 .cardc[cardid='12'],
+.cardsonfield1 .cardc[cardid='0'],
+.cardsonfield1 .cardc[cardid='1'],
+.cardsonfield1 .cardc[cardid='11'],
+.cardsonfield1 .cardc[cardid='12'] {
+    background-color: #5d5e5f;
+}
+
+.cardsonfield0 .cardc[cardid='2'],
+.cardsonfield0 .cardc[cardid='3'],
+.cardsonfield0 .cardc[cardid='9'],
+.cardsonfield0 .cardc[cardid='10'],
+.cardsonfield1 .cardc[cardid='2'],
+.cardsonfield1 .cardc[cardid='3'],
+.cardsonfield1 .cardc[cardid='9'],
+.cardsonfield1 .cardc[cardid='10'] {
+    background-color: #9d9e9f;
 }
