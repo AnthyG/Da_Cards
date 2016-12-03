@@ -101,12 +101,6 @@ io.on('connection', function(socket) {
                     msg: msg,
                     fnc: fnc
                 });
-                // } else if (mode === "mmai") {
-                //     room = room + ":::" + socket.username;
-                //     io.in(room).emit('SA', {
-                //         msg: msg,
-                //         fnc: fnc
-                //     });
             }
         } else {
             if (room !== undefined) { // sender IN
@@ -280,7 +274,7 @@ io.on('connection', function(socket) {
         if (testlogin === undefined) {
             testlogin = "false";
         }
-        return [testlogin, username];
+        return testlogin;
     }
     socket.on('try2login', function(data) {
         if (addedUser) return;
@@ -300,7 +294,6 @@ io.on('connection', function(socket) {
             userlists["o"].push(socket.username);
 
             socket.emit('loginvalid', {
-                username: username,
                 isvalid: true,
                 wlcm: "da peece to MCSAnthy's Da_Cards!"
             });
@@ -311,7 +304,6 @@ io.on('connection', function(socket) {
 
                 socket.state = "playing";
                 socket.join(roomid);
-                socket.join(roomid + ":::" + socket.username);
                 socket.leave("lobby");
                 socket.leave("searching");
 
@@ -361,41 +353,40 @@ io.on('connection', function(socket) {
             socket.emit('Wrong password!');
         }
 
-        if (data['username'] !== "" && data['password'] !== "") {
-            var usernameTEST = data['username'];
-            var password = data['password'];
-            var testlogin = logincheck(usernameTEST, password);
-            var username = testlogin[1];
-            testlogin = testlogin[0];
+        if (data['username'] !== "" && data['password'] !== "" && userlists["o"].indexOf(data['username']) === -1) {
+            var username;
+            var password;
+            username = data['username'];
+            password = data['password'];
 
-            if (userlists["o"].indexOf(username) === -1) {
+            testlogin = undefined;
 
-                console.log("\n" + Date().toString() + ":\n" + "Searching for >>" + username + "<< in the loginlist..");
-                if (testlogin === "true") {
-                    wlcm();
-                } else if (testlogin === "wp") {
-                    wp();
-                } else if (testlogin === "false") {
-                    console.log("\n" + Date().toString() + ":\n" + "Couldn't find >>" + username + "<< in current loginlist, trying again.. ");
-                    ggetloginlist(function() {
-                        var testlogin = logincheck(username, password);
-                        testlogin = testlogin[0];
-                        if (testlogin === "true") {
-                            wlcm();
-                        } else if (testlogin === "wp") {
-                            wp();
-                        } else if (testlogin === "false") {
-                            socket.emit('Not registered yet!');
-                            console.log("\n" + Date().toString() + ":\n" + "Couldn't find >>" + username + "<< in current loginlist!!");
-                        }
-                    });
-                }
-            } else {
-                console.log("\n" + Date().toString() + ":\n" + "User >>" + data['username'] + "<< already logged in or smthng not set");
-                socket.emit('loginvalid', {
-                    isvalid: false
+            console.log("\n" + Date().toString() + ":\n" + "Searching for >>" + username + "<< in the loginlist..");
+
+            var testlogin = logincheck(username, password);
+            if (testlogin === "true") {
+                wlcm();
+            } else if (testlogin === "wp") {
+                wp();
+            } else if (testlogin === "false") {
+                console.log("\n" + Date().toString() + ":\n" + "Couldn't find >>" + username + "<< in current loginlist, trying again.. ");
+                ggetloginlist(function() {
+                    var testlogin = logincheck(username, password);
+                    if (testlogin === "true") {
+                        wlcm();
+                    } else if (testlogin === "wp") {
+                        wp();
+                    } else if (testlogin === "false") {
+                        socket.emit('Not registered yet!');
+                        console.log("\n" + Date().toString() + ":\n" + "Couldn't find >>" + username + "<< in current loginlist!!");
+                    }
                 });
             }
+        } else {
+            console.log("\n" + Date().toString() + ":\n" + "User >>" + data['username'] + "<< already logged in or smthng not set");
+            socket.emit('loginvalid', {
+                isvalid: false
+            });
         }
     });
 
@@ -411,7 +402,6 @@ io.on('connection', function(socket) {
 
                 socket.state = "playing";
                 socket.join(roomid);
-                socket.join(roomid + ":::" + socket.username);
                 socket.leave("lobby");
                 socket.leave("searching");
 
@@ -469,7 +459,6 @@ io.on('connection', function(socket) {
                     userlists["gids"].push(roomid);
                     userlists["eo"][socket.username]["gid"] = roomid;
                     socket.join(roomid);
-                    socket.join(roomid + ":::" + socket.username);
 
                     SCL("GID Created! (" + roomid + ")");
                     socket.waiting = 0;
@@ -484,7 +473,6 @@ io.on('connection', function(socket) {
             }
         } else if (socket.state === "playing") {
             SA("You are already in a Game (" + userlists["eo"][socket.username]["gid"] + ")");
-            socket.join(roomid + ":::" + socket.username);
         }
     });
 
@@ -512,7 +500,6 @@ io.on('connection', function(socket) {
                 socket.state = "lobby";
                 userlists["eo"][socket.username]["gid"] = null;
                 socket.leave(roomid);
-                socket.leave(roomid + ":::" + socket.username);
                 SCL("Quitted search!");
                 rlp2();
             } else {
@@ -561,7 +548,6 @@ io.on('connection', function(socket) {
 
         socket.state = "playing";
         socket.join(roomid);
-        socket.join(roomid + ":::" + socket.username);
         socket.leave("lobby");
         socket.leave("searching");
 
@@ -708,7 +694,7 @@ io.on('connection', function(socket) {
             itshim = 0;
         }
         if (oppo === true) {
-            io.in(roomid + ":::" + userlists["g"][roomid]["Players"][itshim]["Player"]).emit('snddcks', {
+            socket.broadcast.to(roomid).emit('snddcks', {
                 "d0_MP-Left": userlists["g"][roomid]["Players"][itshim]["MP-Left"],
                 "d0_onHand": userlists["g"][roomid]["Players"][itshim]["deck"]["onHand"],
                 "d0_onField": userlists["g"][roomid]["Players"][itshim]["deck"]["onField"],
@@ -719,10 +705,8 @@ io.on('connection', function(socket) {
                 "d1_inBlockC": Object.keys(userlists["g"][roomid]["Players"][itsme]["deck"]["inBlock"]).length,
             });
             console.log("Sent decks into " + roomid);
-            SCL("Received Decks with OPPO = true", "", "aeI", roomid + ":::" + userlists["g"][roomid]["Players"][itshim]["Player"]);
         } else if (oppo === false) {
-            // socket.emit('snddcks', {
-            io.in(roomid + ":::" + socket.username).emit('snddcks', {
+            socket.emit('snddcks', {
                 "d0_MP-Left": userlists["g"][roomid]["Players"][itsme]["MP-Left"],
                 "d0_onHand": userlists["g"][roomid]["Players"][itsme]["deck"]["onHand"],
                 "d0_onField": userlists["g"][roomid]["Players"][itsme]["deck"]["onField"],
@@ -733,10 +717,6 @@ io.on('connection', function(socket) {
                 "d1_inBlockC": Object.keys(userlists["g"][roomid]["Players"][itshim]["deck"]["inBlock"]).length,
             });
             console.log("Sent decks to " + socket.username);
-            io.in(roomid + ":::" + socket.username).emit('SCL', {
-                msg: "Received Decks with OPPO = false",
-                fnc: undefined
-            });
         }
     }
 
@@ -855,7 +835,6 @@ io.on('connection', function(socket) {
             userlists["g"][roomid]["currentPlayer"] = userlists["g"][roomid]["Players"][0]["Player"];
         }
     }
-
     socket.on("movecard", function(data) {
         var roomid = userlists["eo"][socket.username]["gid"];
 
