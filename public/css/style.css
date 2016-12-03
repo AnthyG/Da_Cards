@@ -314,26 +314,39 @@
 }
 
 
-/* 2 2 5 2 2*/
+/* 3 1 5 1 3*/
 
 .cardsonfield0 .cardc[cardid='0'],
 .cardsonfield0 .cardc[cardid='1'],
+.cardsonfield0 .cardc[cardid='2'],
+.cardsonfield0 .cardc[cardid='10'],
 .cardsonfield0 .cardc[cardid='11'],
 .cardsonfield0 .cardc[cardid='12'],
 .cardsonfield1 .cardc[cardid='0'],
 .cardsonfield1 .cardc[cardid='1'],
+.cardsonfield1 .cardc[cardid='2'],
+.cardsonfield1 .cardc[cardid='10'],
 .cardsonfield1 .cardc[cardid='11'],
 .cardsonfield1 .cardc[cardid='12'] {
     background-color: #5d5e5f;
 }
 
-.cardsonfield0 .cardc[cardid='2'],
 .cardsonfield0 .cardc[cardid='3'],
 .cardsonfield0 .cardc[cardid='9'],
-.cardsonfield0 .cardc[cardid='10'],
-.cardsonfield1 .cardc[cardid='2'],
 .cardsonfield1 .cardc[cardid='3'],
-.cardsonfield1 .cardc[cardid='9'],
-.cardsonfield1 .cardc[cardid='10'] {
+.cardsonfield1 .cardc[cardid='9'] {
     background-color: #9d9e9f;
+}
+
+.cardsonfield0 .cardc[cardid='4'],
+.cardsonfield0 .cardc[cardid='5'],
+.cardsonfield0 .cardc[cardid='6'],
+.cardsonfield0 .cardc[cardid='7'],
+.cardsonfield0 .cardc[cardid='8'],
+.cardsonfield1 .cardc[cardid='4'],
+.cardsonfield1 .cardc[cardid='5'],
+.cardsonfield1 .cardc[cardid='6'],
+.cardsonfield1 .cardc[cardid='7'],
+.cardsonfield1 .cardc[cardid='8'] {
+    background-color: #cdcecf;
 }
