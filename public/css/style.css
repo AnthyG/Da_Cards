@@ -114,7 +114,7 @@
     /* WebKit */
     -o-transition: all 0.175s ease-in-out;
     /* Opera */
-    transition: all 0.175s ease-in-ou;
+    transition: all 0.175s ease-in-out;
     /* Standard */
     -webkit-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
     -moz-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
